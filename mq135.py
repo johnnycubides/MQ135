@@ -58,7 +58,7 @@ class MQ135(object):
         if value == 0:
             return -1
 
-        return (1023./value - 1.) * self.RLOAD
+        return (4095./value - 1.) * self.RLOAD
 
     def get_corrected_resistance(self, temperature, humidity):
         """Gets the resistance of the sensor corrected for temperature/humidity"""
